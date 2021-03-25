@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.spring.weather.domain.AjaxDAO">
+
+<!-- 글 목록 (페이징) : page, pageRows -->
+	<select id="selectFromRow" 
+		resultType="com.spring.weather.domain.WriteDTO">
+		<![CDATA[  
+		SELECT
+			w_uid "uid", 
+			city,
+			temp,
+			weather
+		FROM 
+			(SELECT ROWNUM AS RNUM, T.* FROM 
+				(SELECT * FROM exam_weather ORDER BY w_uid DESC) T) 
+		WHERE 
+			RNUM >= #{from} AND RNUM < (#{from} + #{pageRows})
+		]]>	
+	</select>
+	
+ 	<select id="countAll" resultType="int">
+		SELECT count(*) FROM exam_weather 
+	</select>	
+	
+	
+	<!-- /view.ajax : 글 읽기 -->
+	<select id="selectByUid" 
+		resultType="com.spring.weather.domain.WriteDTO">
+		SELECT 
+			w_uid "uid", 
+			city,
+			temp,
+			weather
+		FROM exam_weather 
+		WHERE w_uid=#{uid}
+	</select>
+	
+	<!-- /writeOk.ajax : 글작성 
+		parameter: DTO
+	-->
+	<insert id="insert" flushCache="true">
+		INSERT INTO exam_weather
+			(w_uid, city, temp,weather)
+		VALUES
+			(exam_weather_seq.nextval, 
+			#{city}, #{temp}, #{weather})
+	</insert>
+
+	<!-- /updateOk.ajax : 글 수정
+		parameter: DTO
+	 -->	
+ 	<update id="update" flushCache="true">
+		UPDATE exam_weather 
+		SET temp = #{temp}, weather = #{weather}
+		WHERE w_uid = #{uid}
+	</update>
+	
+ 	 <!-- /deleteOk.ajax : 글삭제
+ 	 		parameter : uid(들)
+ 	  -->
+	<delete id="deleteByUid" flushCache="true"
+		parameterType="java.util.ArrayList">
+		DELETE FROM exam_weather
+		WHERE w_uid IN (
+			<foreach collection="array" item="item" index="index" separator=",">
+				${item}
+			</foreach>
+		)
+	</delete>
+
+</mapper>
