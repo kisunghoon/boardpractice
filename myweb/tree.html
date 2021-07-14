@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>보호수</title>
+    <link rel="stylesheet" href="tree.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script><!--구글 라이브러리 참조-->
+    
+</head>
+
+<body>
+    <div id="wrap">
+        <div id="firstbar">
+            <ul id="barcolor">
+                <li><a href="./index.html">HOME</a></li>
+                <li><a href="./finedust.html">FINE-DUST</a></li>
+                <li><a href="./tree.html">TREE-SHELTER</a></li>
+                <li><a href="./board.html">Board</a></li>
+                <li><a href="./join.html">Join</a></li>
+            </ul>
+        </div><br><br>
+        <div class="clear"></div>
+     
+        <div class="img">
+            <div class="content">
+                &nbsp
+                <h1 style="font-size: medium; font-family: Arial, Helvetica, sans-serif;">서울특별시 강남구 보호수</h1>
+                <h4  style="font-size: medium; font-family: Arial, Helvetica, sans-serif;">강남구에서 제공하는 보호수 정보입니다. 나무종류, 보호수지정일자, 위치정보 등을 제공합니다.</h4>
+                <h2>&nbsp</h2>
+            
+            </div>
+        </div>
+
+      <div id="google_chart_box"></div>
+    <form name="frm">
+        
+      
+
+        <div id="frm">
+
+        도시:
+        <select id="treename" name="treename">
+            <option value="" selected>서울특별시</option>
+        </select>
+         <input type="number"  id="start_index" value="1" style="width:50px; visibility: hidden;"/>
+        <input type="number" id="end_index" value="5" style="width: 50px; visibility: hidden;"><br><br>
+        <button id="btn_load" type="button" style="background-color: black; color: blanchedalmond;">정보 가져오기</button>
+        <button id="btn_remove">지우기</button>
+        </div>
+        <input type="hidden" name="key">
+        <br><p id="result" style="font-weight: bold;">모델결과</p><hr>
+    </form>
+  
+ 
+        <table id="demoJSON"  class="col-md-12"></table>
+            
+        </table>
+        <div class="clear"></div>
+        <script src="shelter.js"></script>
+    </div>
+    <br> <br> <br> <br> <br>
+</body>
+</html>

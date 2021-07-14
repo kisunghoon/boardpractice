@@ -1,10 +1,66 @@
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="UTF-8">
-<title>Insert title here</title>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+
 </head>
-<body>
+<script src="treejs.js"></script>
+<body bgcolor="white">
+    <div id="wrap">
+        <header>
+            
+            <nav id="firstbar">
+                <ul>
+                    <li><a href="./index.html">HOME</a></li>
+                    <li><a href="./finedust.html">FINE-DUST</a></li>
+                    <li><a href="./tree.html">TREE-SHELTER</a></li>
+                    <li><a href="./board.html">Board</a></li>
+                    <li><a href="./join.html">Join</a></li>
+                </ul>
+            </nav>
+        </header>
+        <div class="clear"></div>
+
+        
+        <div id="main_img">
+            <ul>
+                <li><img src="./img/forestbridge.JPG"></li>
+                <li><img src="./img/tree2.jpg"></li>
+            </ul>
+            <br>
+            <div id="middle">
+                <h1>Next Arbor Day</h1>
+                <p id="demo" style="font-size:20px"></p>
+            </div>
+            <div class="bullet">
+                <label for="slide1">&nbsp</label>
+            </div>
+
+            <div class="clear"></div>
+            
+        </div>
+        
+        <article id="nature">
+
+            <div id="danger">
+               
+                <div id="mask">
+                    <button type="button" id="btn_msk" style="background-color: white;" onclick="location.href='mask.html'"><img src="./img/mask3.png"><p style="font-weight: bold;">마스크의 종류</p></button>
+                </div>
+                <div id="bacteria">
+                    <button type="button" id="btn_bac" style="background-color: white;" onclick="location.href='dust.html'"><img src="./img/bacteria.png"><p style="font-weight: bold;">미세먼지심각성<p></button>
+                </div>
+            </div>
+        </article>
+    </div>
+
+
+
 
 </body>
 </html>

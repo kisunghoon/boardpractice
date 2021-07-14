@@ -1,0 +1,100 @@
+
+body{
+  margin:0;
+  padding: 0;
+  
+}
+#wrap{
+    width: 971px;
+    min-height: 790px;
+    margin:0;
+    background-color: white; /*전체 틀 색깔*/
+    margin-right: auto;
+    margin-left: auto;
+    text-align: left;    
+    background-repeat: repeat-y;
+
+}
+
+nav#firstbar{
+    float: left;
+}
+nav#firstbar ul{
+    list-style: none;
+
+}
+
+nav#firstbar ul li{
+    float: left;
+    margin: 0 5px;
+}
+nav#firstbar a{
+    text-decoration: none;
+    color:black;
+    display: block;
+    padding: 10px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.clear{
+    clear: both;
+}
+#main_img{
+    overflow: hidden;
+    height: 500px;
+    width: 930px;
+    
+
+}
+
+
+#main_img >ul >li{
+    /* background-image: url("./forestbridge.JPG");  */
+    width: 920px;
+    height: 500px;
+    
+    background-repeat: no-repeat;
+    background-position: center top;
+    display: inline-block;
+   
+    
+}
+#middle{
+  position: absolute;
+  top: 30%;
+  left: 42%;
+  text-align: center;
+  color: aliceblue;
+}
+article#front{
+    margin: 5px 0 5px 0;
+}
+
+#danger{
+  
+    width:940px;
+    min-height: 200px;
+    background-color: white;
+    margin: 0 0 0 16px;
+}
+#mask,#bacteria{
+    float: left;
+    
+}
+#mask{
+    margin: 10px 90px 0 180px;
+   
+}
+
+#bacteria{
+    margin: 10px 140px 0 150px;
+}
+#mask button{
+  
+    border: 0;
+    width: 180px;
+    
+}
+#bacteria button{
+    border:0;
+    width: 180px;
+}

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>게시판</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="board.css">
+</head>
+<body>
+    <div id="wrap">
+    
+        <div id="firstbar">
+            <ul id="barcolor">
+                <li><a href="./index.html">HOME</a></li>
+                <li><a href="./finedust.html">FINE-DUST</a></li>
+                <li><a href="./tree.html">TREE-SHELTER</a></li>
+                <li><a href="./board.html">Board</a></li>
+                <li><a href="./join.html">Join</a></li>
+            </ul>
+        </div>
+        <div class="clear"></div><br>
+        
+      <br><h5 style="margin-left: 40px; color: darkgreen;">글쓰기 게시판</h5><hr style="background-color: darkgreen;">  <br><br>  <br><br>
+
+      <table class="table table-hover">
+          <thead>
+              <tr class="table-success">
+                  <th>번호</th>
+                  <th>제목</th>
+                  <th>작성자</th>
+                  <th>날짜</th>
+                  <th>조회수</th>
+              </tr>
+          </thead>
+          <tbody>
+            <tr>
+                <td>1</td>
+                <td>공지사항1 </td>
+                <td>운영자</td>
+                <td>2021-03-21</td>
+                <td>2</td>
+            </tr>
+              <tr>
+                  <td>2</td>
+                  <td>공지사항2</td>
+                  <td>운영자</td>
+                  <td>2021-03-21</td>
+                  <td>2</td>
+              </tr>
+          </tbody>
+       
+      </table>
+      <hr><br><br>
+      <div class="pagination">
+          <ul class="pagination">
+              <li><a href="#"><a class="page-link" href="#" style="color: black;">Previous</a></a></li>
+              <li><a href="#"><a class="page-link" href="#" style="color: black;">1</a></a></li>
+              <li><a href="#"><a class="page-link" href="#" style="color: black;">2</a></a></li>
+              <li><a href="#"><a class="page-link" href="#" style="color: black;">3</a></a></li>
+              <li><a href="#"><a class="page-link" href="#" style="color: black;">NEXT</a></a></li>
+              
+        </ul>
+      </div>
+
+     <div class="form-row float-right">
+         <button type="button" class="btn btn-outline-dark">글쓰기</button>
+     </div>
+    </div>
+</body>
+</html>

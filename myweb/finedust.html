@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>미세먼지</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <link rel="stylesheet" href="finedust.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script><!--구글 라이브러리 참조-->
+    
+</head>
+<body>
+   <div id="wrap">
+
+    <div id="firstbar">
+        <ul id="barcolor">
+            <li><a href="./index.html">HOME</a></li>
+            <li><a href="./finedust.html">FINE-DUST</a></li>
+            <li><a href="./tree.html">TREE-SHELTER</a></li>
+            <li><a href="./board.html">Board</a></li>
+            <li><a href="./join.html">Join</a></li>
+        </ul>
+    </div><br><br>
+    <div class="clear"></div>
+
+    <div class="img">
+        <div class="content">
+            &nbsp
+            <h1 style="font-size: medium; font-family: Arial, Helvetica, sans-serif;">서울시 권역별 실시간 대기환경 현황</h1>
+            <h4 style="font-size: medium; font-family: Arial, Helvetica, sans-serif;">대기 환경지수, 미세먼지, 오존, 이산화질소, 일산화탄소, 아황산가스 등의<br> 권역별 실시간 대기환경정보를 제공합니다.</h4>
+            <h2>&nbsp</h2>
+        
+        </div>
+    </div>
+
+    <form name="frm">
+        <div id="frm">
+       <input type="number" id="start_index" value="1" style=" visibility: hidden;"/><br>
+        <input type="number" id="end_index" value="25" style=" visibility: hidden;"><br>
+        <button id="btn_load" type="button" style="background-color: black; color: blanchedalmond;">정보 가져오기</button>
+        <button id="btn_remove">지우기</button>
+        </div>
+        <br><p id="result" style="font-weight: bold;">모델결과</p><hr>
+    </form>
+    
+   
+    <table id="demoJSON" class="col-md-12" class="table-sm"> 
+       
+    </table>
+
+    
+    <div class="clear"></div>
+    <script src="finedust.js"></script>
+   <br> <br> <br> <br> <br>
+    <!-- <div id="google_chart_box" style="width: 700px; height: 700px;"></div> -->
+    </div>
+    </div>
+   
+</body>
+</html>

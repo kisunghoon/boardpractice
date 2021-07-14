@@ -1,0 +1,237 @@
+body{
+    margin:0;
+    padding: 0;
+    
+  }
+  #wrap{
+      width: 971px;
+      min-height: 790px;
+      margin:0;
+      background-color: white; /*전체 틀 색깔*/
+      margin-right: auto;
+      margin-left: auto;
+      text-align: left;    
+      background-repeat: repeat-y;
+    
+  }
+
+
+nav#firstbar{
+    float: left;
+    
+}
+nav#firstbar ul{
+    list-style: none;
+    
+
+}
+
+nav#firstbar ul li{
+    float: left;
+    margin: 0 5px;
+}
+nav#firstbar a{
+    text-decoration: none;
+    color:black;
+    display: block;
+    padding: 10px;
+    font-family: Arial, Helvetica, sans-serif;
+    
+}
+.clear{
+    clear: both;
+}
+
+ul#sub{
+    list-style: none;
+    
+}
+#title1{
+    margin-left: 10px;
+    font-size: 15pt;
+}
+div.sub{
+    overflow: auto;
+    position: absolute;
+    height: 80%;
+    width: 200px;
+    margin: 0;
+    padding: 0;
+    background-color: whitesmoke;
+    
+}
+div.sub a{
+    display: block;
+    color: black;
+    padding: 16px;
+    text-decoration: none;
+    background-color: whitesmoke;
+    
+}
+
+.sub .active{
+    background-color: #324c42; height: 15%;
+    text-align: center
+}
+
+#submenu{
+   display: flex;
+   padding: 50px;
+   
+   border-radius: 10%;
+   float: left;
+   
+}
+
+#content{
+    width:940px;
+    min-height: 200px;
+  
+  
+    float:center;
+    text-align: center;
+}
+.content h4{
+    text-align: center;
+}
+#content #submenu #title1{
+    background-color: darkgreen; height: 60%;
+    text-align: middle;
+    
+}
+table.type09{
+    border-collapse: collapse;
+    margin: 0 0 0 300px;
+   
+}
+#aa{
+   text-decoration: underline;
+    
+}
+#mask{
+    margin: 0 0 0 300px;
+    float:left;
+
+}
+#mask1{
+    margin: 0 360px 0 20px;
+    float: right;
+}
+#mask_text{
+    float:right;
+}
+
+table.type09 thead th{
+    padding: 15px;
+    font-weight: bold;
+    vertical-align: top;
+    color:black;
+    border-bottom: 2px solid white;
+    background: #324c42;
+
+}
+
+table.type09 td{
+    width:250px;
+    padding: 10px;
+    border-bottom: 1px solid gray;
+    vertical-align: top;
+   
+}
+
+table.type09 tbody th{
+
+    padding:10px;
+    font-weight: bold;
+    vertical-align: top;
+    border-bottom: 1px solid gray;
+    background: gray;
+}
+
+/**/
+table.type10{
+    border-collapse: collapse;
+    margin: 0 0 0 300px;
+}
+
+table.type10 thead th{
+    padding: 15px;
+    font-weight: bold;
+    vertical-align: top;
+    color:black;
+    border-bottom: 2px solid white;
+    background: #324c42;
+    width:150px;
+    margin: 0 0 0 20px;
+}
+
+table.type10 td{
+    width:30px;
+    padding: 10px;
+    border-bottom: 1px solid gray;
+    vertical-align: top;
+    margin: 0 0 0 20px;
+}
+
+table.type10 tbody th{
+    width:204px;
+    padding:10px;
+    font-weight: bold;
+    vertical-align: top;
+    border-bottom: 1px solid gray;
+    background: gray;
+}
+
+
+table.type11{
+    border-collapse: collapse;
+    margin: 0 0 0 300px;
+}
+
+table.type11 thead th{
+    padding: 15px;
+    font-weight: bold;
+    vertical-align: top;
+    color:black;
+    border-bottom: 2px solid white;
+    background: #324c42;
+    width:150px;
+    margin: 0 0 0 20px;
+}
+
+table.type11 td{
+    width:30px;
+    padding: 10px;
+    border-bottom: 1px solid gray;
+    vertical-align: top;
+    margin: 0 0 0 20px;
+    text-align: left;
+}
+
+table.type11 tbody th{
+    width:204px;
+    padding:10px;
+    font-weight: bold;
+    vertical-align: top;
+    border-bottom: 1px solid gray;
+    background: gray;
+}
+
+
+.img{
+    position: relative;
+    background-image: url("./img/forestbridge.JPG");
+    color: white;
+}
+.img-cover{
+    position: absolute;
+    z-index: 1;
+}
+.img .content{
+    text-align: center;
+    font-size: 10pt;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+.img .content h4{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}

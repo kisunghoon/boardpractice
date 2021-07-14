@@ -1,0 +1,9 @@
+div .float{
+
+    margin: 0 auto;
+    float: left;
+    width:50px;
+}
+.clear{
+    clear: both;
+}
