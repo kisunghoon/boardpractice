@@ -1,0 +1,102 @@
+<!-- by 임동혁 -->
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<title>JSON 데이터 다루기</title>
+<style>
+table, td, th, tr{
+	border: 1px solid black;
+	border-collapse: collapse;
+	height: 25px;
+}
+td#t1 {
+	text-align: center; /* '타이틀' 가운데 정렬 */
+}	
+table{
+	width: 100%;
+}
+</style>
+
+</head>
+
+<script src="JS/Js006_Data.js"></script>
+
+<body>
+
+<script>
+
+// TODO
+// document.write(x.items[0].title + "<br>");
+
+// document.write("월세 : " + x.items[0].item.rent + "<br>");
+// document.write("보증금 : " + x.items[0].item.deposit + "<br>");
+// document.write("타이틀 : " + x.items[0].item.title + "<br>");
+// document.write("<br>");
+
+document.write(x.items.length + "개의 매물이 있습니다.");
+document.write("<table>\n");
+	document.write("<td>" + "No" + "</td>"); // No
+	document.write("<td id = \"t1\">" + "타이틀" + "</td>"); // 타이틀
+	document.write("<td>" + "월세" + "</td>"); // 월세
+	document.write("<td>" + "보증금" + "</td>"); // 보증금
+
+	for (j = 0; j < x.items.length; j++) {
+		document.write("<tr>\n");
+
+		document.write("<td>" + (j+1) + "</td>"); // No
+
+		document.write("<td>" + x.items[j].item.title + "</td"); // 타이틀
+		document.write("<td>" + "</td>");
+		document.write("<td>" + x.items[j].item.rent + "</td"); // 월세
+		document.write("<td>" + "</td>");
+		document.write("<td>" + x.items[j].item.deposit + "</td"); // 보증금
+		
+		document.write("</tr>\n");
+}
+document.write("</table>\n");
+
+
+
+
+
+// for (i = 1; i < x.items.length; i++) {
+// 	document.write(i + "번 ");
+// 	document.write("타이틀 : " + x.items[i].item.title + "<br>");
+// 	document.write("월세 : " + x.items[i].item.rent + "<br>");
+// 	document.write("보증금 : " + x.items[i].item.deposit + "<br>");
+// 	document.write("<br>");
+// }
+
+</script>
+
+
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
