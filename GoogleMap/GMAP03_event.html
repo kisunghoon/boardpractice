@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<title>GoogleMap - Event</title>
+</head>
+<body>
+<h1>Google Map - Event</h1>
+
+<!-- Map Container 와 크기 지정 -->
+<div id="googleMap" style="width:100%;height:400px;"></div>
+
+<script>
+function myMap() {
+
+	// 구글맵의  property 지정
+	var mapProp = {
+        // 지도 중심 좌표 (lat, lng)
+        center: new google.maps.LatLng(37.499558, 127.035861),
+
+        // zoom level
+        zoom : 17
+    }
+
+    var map = new google.maps.Map(document.getElementById("googleMap"), mapProp);
+
+	// 마커 지정
+	var myPos1 = {lat: 37.499558, lng: 127.035861};
+	var marker1 = new google.maps.Marker({position: myPos1});
+	marker1.setMap(map);
+
+	// 마커를 클릭하면 zoom 레벨을 9로 조정
+	google.maps.event.addListener(marker1, "click", function(){
+		map.setZoom(16);
+		map.setCenter(myPos2);
+	});
+
+
+	// 애니메이션 마커
+	var myPos2 = {lat: 37.499558, lng: 127.036861};
+	var marker2 = new google.maps.Marker({
+		position: myPos2,
+		animation: google.maps.Animation.BOUNCE
+	});
+	marker2.setMap(map);
+
+	google.maps.event.addListener(marker2, "click", function(){
+		map.setCenter({
+			lat : 51.5133401977687, 
+			lng : -0.11987528803705663
+		});
+	});
+
+}
+
+</script>
+
+<!-- ↓key=API키, callback=함수 지정 -->
+<script src="https://maps.googleapis.com/maps/api/js?key=당신의key&callback=myMap"></script>
+
+</body>
+</html>
