@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<title>영화목록조회 - 영화진흥위원회</title>
+<style>
+table,th,td {
+  border : 1px solid black;
+  border-collapse: collapse;
+}
+th,td {
+  padding: 5px;
+}
+</style>
+</head>
+<!--
+■ 영화진흥위원회 : 영화목록조회
+http://www.kobis.or.kr/kobisopenapi/homepg/apiservice/searchServiceInfo.do
+
+http://www.kobis.or.kr/kobisopenapi/webservice/rest/movie/searchMovieList.xml  (XML)
+http://www.kobis.or.kr/kobisopenapi/webservice/rest/movie/searchMovieList.json  (JSON)
+	key : (발급키)
+	movieNm : 조회할 영화명 (utf-8 인코딩)
+	openStartDt : 조회시작 개봉연도 (날짜yyyyMMdd)
+	itemPerPage : 결과 row 의 개수
+	curPage : 현재 페이지
+
+샘플url
+XML 버젼
+http://kobis.or.kr/kobisopenapi/webservice/rest/movie/searchMovieList.xml?key=f5eef3421c602c6cb7ea224104795888
+
+JSON 버젼
+http://kobis.or.kr/kobisopenapi/webservice/rest/movie/searchMovieList.json?key=f5eef3421c602c6cb7ea224104795888
+-->
+<body>
+<h1>$.ajax() : 영화목록조회</h1>
+<form name="frm">
+영화명: <input type="text" name="movieNm" placeholder="검색할 영화명 입력.." value="미션"><br>
+조회시작 개봉연도(yyyy): <input type="number" name="openStartDt" placeholder="yyyy" value="2000"/><br>
+출력ROW : <input type="number" value="10" name="itemPerPage"><br>
+출력페이지 : <input type="number" value="3" name="curPage"><br>
+<input type="hidden" value="" name="key">
+<br><br>
+
+<button type="button" id="btnLoad">정보 가져오기</button>
+<button type="button" id="btnRemove">지우기</button>
+</form>
+
+<hr>
+
+<h2>검색결과</h2>
+<table id="demoJSON"></table>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script>
+var api_key = "17dc4bdf2fa4152e2630184cec7e331c";  // 자신의 키값 입력하기!
+var req_url = "http://www.kobis.or.kr/kobisopenapi/webservice/rest/movie/searchMovieList.json";
+
+// jQuery 함수를 사용하여 구현하기
+$(function(){
+
+	$("#btnLoad").click(function(){
+		var movieNm = $("[name='movieNm']").val();
+		var openStartDt =$("[name='openStartDt']").val();
+		var itemPerPage = $("[name='itemPerPage']").val();
+		var curPage = $("[name='curPage']").val();
+		$("[name='key']").val(api_key);
+
+		// 유효성 검사 (보류)
+		if(movieNm == ""){
+			alert("영화명은 필수 입력입니다.");
+			$("[name='movieNm']").focus();
+			return;
+		}
+
+		// 개봉년도
+		var openStartDtPat = /^[0-9]{4}$/;
+
+		// JSON AJAX requst
+		// $.ajax() 사용
+		
+		// var url = req_url + "?key=" + api_key 
+		// 			+ "&movieNm=" + encodeURI(movieNm)
+		// 			+ "&openStartDt=" + openStartDt
+		// 			+ "&itemPerPage=" + itemPerPage
+		// 			+ "&curPage=" + curPage
+		// 			;
+
+		// var queryString = "key=" + api_key 
+		// 			+ "&movieNm=" + encodeURI(movieNm)
+		// 			+ "&openStartDt=" + openStartDt
+		// 			+ "&itemPerPage=" + itemPerPage
+		// 			+ "&curPage=" + curPage
+		// 			;
+
+		// serialize() 
+		// form 의 입력데이터(들) --> query string 으로 만들어줌
+		//alert($("[name='frm']").serialize());
+		
+		$.ajax({
+			url: req_url,
+			type: "GET",
+			//data: queryString,
+			data: $("[name='frm']").serialize(), // data 에 query string 
+			cache: false,
+			success: function(data, status){
+				if(status == "success") parseJSON(data);
+			}
+		});
+
+	})
+
+	$("#btnRemove").click(function(){
+		// [지우기] 버튼 동작
+		$("#demoJSON").empty();
+	})
+});
+
+function parseJSON(jsonObj){
+	
+	var list = jsonObj.movieListResult.movieList;
+
+	var table = "<tr><td>영화명</td><td>개봉일</td><td>감독(들)</td><td>제작사(들)</td></tr>";
+
+	for(i = 0; i < list.length; i++){
+		var directors = [];
+		var companys = [];
+		table += "<tr>";
+		table += "<td>" + list[i].movieNm + "</td>";
+		table += "<td>" + list[i].prdtYear + "</td>";
+	
+		for(l = 0; l < list[i].directors.length; l++){
+			directors.push(list[i].directors[l].peopleNm)
+		}
+		for(l = 0; l < list[i].companys.length; l++){
+			companys.push(list[i].companys[l].companyNm)
+		}
+		table += "<td>" + directors.toString() + "</td>";	
+		table += "<td>" + companys.toString() + "</td>";
+		table += "</tr>"
+	}
+	
+	$("#demoJSON").html(table);
+}
+</script>
+
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
