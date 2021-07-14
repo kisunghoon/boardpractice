@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="ko">
+<html>
+<head>
+<meta charset=utf-8>
+<title>table 연습</title>
+<!-- by 임장호 -->
+<style>
+table, th, td {
+    border: 1px solid black;  /* 두께, 선종류, 선색상 */
+    border-collapse: collapse; /* border 붙이기 */
+}
+
+td {
+	padding: 15px;	/* 셀 안쪽의 컨텐트와 border 사이 여백 */
+	text-align: center;
+}
+
+.Mond td{
+	border: 5px solid black;
+}
+
+</style>
+
+</head>
+<body>
+
+<table>
+	<tr>
+		<td rowspan="3" width="150px">1</td>
+		<td colspan="3">2</td>
+	</tr>
+	<tr>
+		<td colspan="3">3</td>
+	</tr>
+	<tr>
+		<td width="30px">4</td>
+		<td width="50px">5</td>
+		<td width="30px">6</td>
+	</tr>
+
+</table>
+
+<br>
+
+<table>
+	<tr>
+		<td rowspan="3" width="150px">1</td>
+		<td colspan="3">2</td>
+	</tr>
+	<tr>
+		<td colspan="2">3</td>
+		<td>4</td>
+	</tr>
+	<tr>
+		<td width="30px">5</td>
+		<td width="50px">6</td>
+		<td width="30px">7</td>
+	</tr>
+
+</table>
+
+<br>
+<table>
+	<tr>
+		<td width="150px">1</td>
+		<td colspan="2" rowspan="2" width="150px">2</td>
+		<td rowspan="3" width="50px">3</td>
+	</tr>
+	<tr>
+		<td>4</td>
+	</tr>
+	<tr>
+		<td>5</td>
+		<td width="30px">6</td>
+		<td width="50px">7</td>
+	</tr>
+
+</table>
+
+<br>
+<!-- 몬드리안 -->
+<table class="Mond">
+	<tr>
+		<td colspan="2" width="80px" style="background-color: AliceBlue"></td>
+		<td colspan="2" width="100px" style="background-color: Beige"></td>
+		<td colspan="2" width="100px" style="background-color: Gold"></td>
+		<td rowspan="4" style="background-color: FloralWhite"></td>
+	</tr>
+
+	<tr>
+		<td width="10px" height="80px" style="background-color: GhostWhite"></td>
+		<td width="150px" colspan="3" rowspan="2" style="background-color: Maroon"></td>
+		<td width="100px" colspan="2" style="background-color: Gold"></td>
+	</tr>
+
+	<tr>
+		<td width="10px" height="80px" rowspan="2" style="background-color: Lavender"></td>
+		<td width="50px" height="80px" style="background-color: white"></td>
+		<td width="50px" height="80px" style="background-color: white"></td>
+	</tr>
+
+	<tr>
+		<td colspan="2" width="100px" style="background-color: black"></td>
+		<td width="100px" style="background-color: LightSteelBlue"></td>
+		<td colspan="2" width="100px" style="background-color: white"></td>
+	</tr>
+
+	<tr>
+		<td style="background-color: Gold"></td>
+		<td colspan="2" width="100px" style="background-color: black"></td>
+		<td width="100px" style="background-color: LightSteelBlue"></td>
+		<td colspan="2" width="100px" style="background-color: MidnightBlue"></td>
+		<td style="background-color: Maroon"></td>
+	</tr>
+
+</table>
+
+<br>
+
+
+
+
+	<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+	</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

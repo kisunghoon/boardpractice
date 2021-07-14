@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<title>Table2</title>
+<style>
+table, th, td {
+    border: 1px solid black;  /* 두께, 선종류, 선색상 */
+    border-collapse: collapse; /* border 붙이기 */
+}
+
+th, td {
+	padding: 15px;	/* 셀 안쪽의 컨텐트와 border 사이 여백 */
+}
+
+th {
+	text-align: left;
+}
+</style>
+
+</head>
+<!--
+colspan : 열병합
+rowspan : 행병합 
+ -->
+<body>
+
+<table style="width:100%">
+	<tr>
+		<th>이름</th>
+		<th colspan="2">전화번호</th>
+		
+	</tr>
+	
+	<tr>
+		<td>김성중</td>
+		<td>02-11-2222</td>
+		<td>010-7777-8888</td>
+	</tr>
+
+</table>
+
+<br>
+
+<table style="width:100%">
+	<tr>
+		<th>이름</th>
+		<td>김병진</td>
+	</tr>
+	<tr>
+		<th rowspan="2">전화번호</th>
+		<td>000-000-000</td>
+	</tr>
+	<tr>
+
+		<td>11-222-222</td>
+	</tr>
+</table>
+
+<br>
+
+<table style="width:100%">
+	<tr>
+		<td>1</td>
+		<td>2</td>
+		<td>3</td>
+	</tr>
+	<tr>
+		<td>4</td>
+		<td colspan="2" rowspan="2">5</td>
+	</tr>
+	<tr>
+		<td>7</td>
+	</tr>
+</table>
+
+<br>
+
+<table style="width:100%">
+	<tr>
+		<td>1</td>
+		<td>2</td>
+		<td>3</td>
+	</tr>
+	<tr>
+		<td colspan="2">4</td>
+		<td>6</td>
+	</tr>
+	<tr>
+		<td>7</td>
+		<td colspan="2">8</td>
+	</tr>
+</table>
+
+<br>
+
+<table style="width:100%">
+	<tr>
+		<td>1</td>
+		<td>2</td>
+		<td>3</td>
+	</tr>
+	<tr>
+		<td rowspan="2" colspan="2">4</td>
+		<td>6</td>
+	</tr>
+	<tr>
+		<td>9</td>
+	</tr>
+</table>
+
+
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
